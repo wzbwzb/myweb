@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myweb.demo.dao.UserDao">
+    <select id="queryAllUser" resultType="com.myweb.demo.dbmodel.User">
+        select  * from TUSER
+    </select>
+
+</mapper>

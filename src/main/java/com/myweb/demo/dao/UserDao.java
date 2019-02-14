@@ -15,16 +15,13 @@
  * @since 0.0.1
  */
 
-package com.myweb.demo.services;
+package com.myweb.demo.dao;
 
-import com.myweb.demo.dao.ScheduleDao;
-import com.myweb.demo.dao.UserDao;
-import com.myweb.demo.dbmodel.Schedule;
 import com.myweb.demo.dbmodel.User;
-import org.springframework.stereotype.Service;
+import org.apache.ibatis.annotations.Mapper;
 
-import javax.annotation.Resource;
 import java.util.List;
+
 
 /**
  * <pre>
@@ -34,20 +31,8 @@ import java.util.List;
  * @author wanzhibin
  * @since 1.0.0
  */
-@Service
-public class ScheduleService {
+@Mapper
+public interface UserDao {
 
-
-    private ScheduleDao scheduleDao;
-
-    @Resource
-    private UserDao userDao;
-
-    public List<Schedule> queryAllSchedule(){
-        return scheduleDao.queryAllSchedule();
-    }
-
-    public List<User> queryAllUser(){
-        return userDao.queryAllUser();
-    }
+    List<User> queryAllUser();
 }

@@ -19,6 +19,7 @@ package com.myweb.demo.controller;
 
 import com.myweb.demo.dao.ScheduleDao;
 import com.myweb.demo.dbmodel.Schedule;
+import com.myweb.demo.dbmodel.User;
 import com.myweb.demo.services.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -45,7 +46,7 @@ public class ScheduleController {
 
     @RequestMapping("/querySchedule")
     @ResponseBody
-    public List<Schedule> queryAllSchedule(){
-        return  scheduleService.queryAllSchedule();
+    public List<User> queryAllSchedule(){
+        return  scheduleService.queryAllUser();
     }
 }
